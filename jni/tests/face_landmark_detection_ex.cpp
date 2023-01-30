@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
     deserialize(argv[1]) >> sp;
     const std::string path = argv[2];
     // Read a image using opencv
-    cv::Mat inputImage = cv::imread(path, CV_LOAD_IMAGE_COLOR);
+    cv::Mat inputImage = cv::imread(path, cv::IMREAD_COLOR);
 
     // Limit minimal detected face size so you can downscale input image several
     // times to skip small faces.
